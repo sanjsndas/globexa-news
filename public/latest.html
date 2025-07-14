@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globexa News – Latest News</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for Globexa News */
+        :root {
+            --midnight-blue: #263238;
+            --signal-red: #D32F2F;
+            --silver-gray: #B0BEC5;
+            --clean-white: #FAFAFA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter as specified */
+            background-color: var(--clean-white);
+            color: var(--midnight-blue);
+        }
+
+        /* Ensure smooth transitions for interactive elements */
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-duration: 300ms;
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-[--midnight-blue] text-[--clean-white] shadow-lg rounded-b-lg p-4 md:p-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3 mb-4 md:mb-0">
+                <span class="text-3xl"><i class="fas fa-globe-americas"></i></span>
+                <span class="font-bold text-3xl tracking-tight">Globexa News</span>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-8 text-lg">
+                <a href="index.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Home</a>
+                <a href="latest.html" tabindex="0" aria-current="page" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2 font-semibold text-[--signal-red]">Latest news</a>
+                <a href="privacy.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Privacy</a>
+                <a href="cookies.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Cookies</a>
+                <a href="contact.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content for Latest News -->
+    <main class="container mx-auto p-4 md:p-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-[--midnight-blue] mb-10 text-center">Latest News from Around the Globe</h1>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- News Article 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <img src="b1.webp" alt="Global Economy" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Global Economy Shows Signs of Steady Recovery</h3>
+                    <p class="text-gray-700 text-sm">Analysts point to resilient consumer spending and easing inflation pressures in key markets.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <img src="b2.avif" alt="Climate Action" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">New Climate Accord Reached at International Summit</h3>
+                    <p class="text-gray-700 text-sm">Nations commit to ambitious targets for emissions reduction and renewable energy investment.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <img src="b3.webp" alt="Tech Innovation" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Breakthrough in AI-Powered Drug Discovery Announced</h3>
+                    <p class="text-gray-700 text-sm">Researchers unveil a new method that significantly accelerates the development of new medicines.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <img src="b4.webp" alt="Space Exploration" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">New Missions to Mars Planned by International Consortium</h3>
+                    <p class="text-gray-700 text-sm">Collaborative efforts aim to establish a permanent human presence on the Red Planet.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 5 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <img src="b5.webp" alt="Geopolitics" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Diplomatic Efforts Intensify in Eastern European Conflict</h3>
+                    <p class="text-gray-700 text-sm">World leaders engage in high-stakes negotiations to de-escalate tensions and seek peace.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 6 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <img src="b6.webp" alt="Health Crisis" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Global Health Organizations Address New Viral Outbreak</h3>
+                    <p class="text-gray-700 text-sm">Rapid response teams deployed to affected regions to contain the spread and provide aid.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 7 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Ancient Cultural Sites Reopened After Restoration Efforts</h3>
+                    <p class="text-gray-700 text-sm">International teams complete extensive work to preserve and showcase historical treasures.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 8 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Landmark Environmental Protection Bill Passed in Europe</h3>
+                    <p class="text-gray-700 text-sm">New legislation aims to drastically reduce pollution and protect biodiversity across the continent.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 9 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Emerging Markets See Strong Inflow of Foreign Investment</h3>
+                    <p class="text-gray-700 text-sm">Investors are increasingly looking towards developing economies for growth opportunities.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+
+            <!-- News Article 10 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                <div class="p-5">
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Global Movement for Social Justice Gains Momentum</h3>
+                    <p class="text-gray-700 text-sm">Activists and organizations worldwide push for greater equality and human rights.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[--midnight-blue] text-[--clean-white] p-6 md:p-8 mt-12 rounded-t-lg">
+        <div class="container mx-auto text-center grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="mb-4 md:mb-0">
+                <a href="index.html" class="text-xl font-bold tracking-tight">Globexa News</a>
+                <p class="text-sm mt-2">&copy; 2025 Globexa News. All rights reserved.</p>
+                <p class="text-sm">Global Stories. Local Clarity.</p>
+            </div>
+            <div class="mb-4 md:mb-0">
+                <h3 class="font-semibold text-lg mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-[--signal-red] transition-colors">Home</a></li>
+                    <li><a href="latest.html" class="hover:text-[--signal-red] transition-colors">Latest News</a></li>
+                    <li><a href="privacy.html" class="hover:text-[--signal-red] transition-colors">Privacy Policy</a></li>
+                    <li><a href="cookies.html" class="hover:text-[--signal-red] transition-colors">Cookies Policy</a></li>
+                    <li><a href="contact.html" class="hover:text-[--signal-red] transition-colors">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Advertise</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-lg mb-3">Connect With Us</h3>
+                <div class="flex justify-center space-x-6 text-2xl">
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

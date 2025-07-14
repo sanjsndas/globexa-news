@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globexa News – Global Stories. Local Clarity.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for Globexa News */
+        :root {
+            --midnight-blue: #263238;
+            --signal-red: #D32F2F;
+            --silver-gray: #B0BEC5;
+            --clean-white: #FAFAFA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter as specified */
+            background-color: var(--clean-white);
+            color: var(--midnight-blue);
+        }
+
+        /* Custom scrollbar for ticker */
+        .ticker-container::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .ticker-container::-webkit-scrollbar-track {
+            background: var(--midnight-blue);
+            border-radius: 2px;
+        }
+
+        .ticker-container::-webkit-scrollbar-thumb {
+            background: var(--signal-red);
+            border-radius: 2px;
+        }
+
+        .ticker-container::-webkit-scrollbar-thumb:hover {
+            background: #a82525;
+        }
+
+        /* Custom animation for ticker */
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .animate-ticker {
+            animation: ticker 20s linear infinite;
+        }
+
+        /* Ensure smooth transitions for interactive elements */
+        .transition-colors {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-duration: 300ms;
+        }
+
+        .transition-transform {
+            transition-property: transform;
+            transition-duration: 300ms;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="bg-[--midnight-blue] text-[--clean-white] shadow-lg rounded-b-lg p-4 md:p-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 mb-4 md:mb-0">
+                <span class="text-3xl"><i class="fas fa-globe-americas"></i></span>
+                <span class="font-bold text-3xl tracking-tight">Globexa News</span>
+            </a>
+
+            <!-- Navigation -->
+                <a href="index.html" tabindex="0" aria-current="page" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2 font-semibold text-[--signal-red]">Home</a>
+                <a href="latest.html"  tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Latest news</a>
+                <a href="privacy.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Privacy</a>
+                <a href="cookies.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Cookies</a>
+                <a href="contact.html" tabindex="0" class="hover:text-[--signal-red] transition-colors rounded-md py-1 px-2">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        <!-- Hero Section -->
+        <section class="mb-12 bg-gray-100 rounded-xl shadow-md p-6 md:p-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-[--midnight-blue] mb-6 text-center">Global Stories. Local Clarity.</h1>
+
+            <!-- Live Ticker -->
+            <div class="bg-[--midnight-blue] text-[--clean-white] p-3 rounded-lg mb-6 overflow-hidden relative">
+                <div class="flex items-center">
+                    <span class="bg-[--signal-red] text-sm font-semibold px-3 py-1 rounded-full mr-4 flex-shrink-0">BREAKING</span>
+                    <div class="flex-grow overflow-hidden">
+                        <div class="whitespace-nowrap animate-ticker inline-block">
+                            <span class="mr-8">• Ukraine conflict: New peace talks proposed by UN.</span>
+                            <span class="mr-8">• Global tech giants face antitrust probes in Europe.</span>
+                            <span class="mr-8">• Climate summit concludes with mixed results on emissions.</span>
+                            <span class="mr-8">• Inflation concerns rise globally amid supply chain issues.</span>
+                            <span class="mr-8">• Major breakthrough in quantum computing announced.</span>
+                            <span class="mr-8">• New trade agreements reshape global economic landscape.</span>
+                            <span class="mr-8">• Global health organizations launch new pandemic preparedness plan.</span>
+                            <span class="mr-8">• Cultural festivals unite communities worldwide.</span>
+                            <span class="mr-8">• Arctic ice melt accelerates, raising sea level concerns.</span>
+                            <span class="mr-8">• Cybersecurity firm uncovers major international espionage ring.</span>
+                            <span class="mr-8">• New archaeological discovery sheds light on ancient civilizations.</span>
+                            <span class="mr-8">• Global food prices see unexpected surge.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Story / Editor's Pick -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <img src="p1.webp" alt="Editor's Pick" class="w-full h-64 md:h-full object-cover">
+                    <div class="p-6 flex flex-col justify-center">
+                        <span class="text-[--signal-red] font-semibold text-sm mb-2">EDITOR'S PICK</span>
+                        <h2 class="font-bold text-3xl text-[--midnight-blue] mb-3">The Geopolitical Chessboard: Navigating New Alliances</h2>
+                        <p class="text-gray-700 text-base mb-4">An in-depth analysis of shifting global power dynamics and the formation of new strategic partnerships that will define the next decade. Explore the intricate dance of nations and their evolving interests, from economic blocs to military pacts.</p>
+                        <a href="#" class="inline-block bg-[--signal-red] text-[--clean-white] px-6 py-3 rounded-full hover:bg-red-700 transition-colors shadow-md">Read Full Analysis</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trending Global Stories -->
+            <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 text-center">Trending Global Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Trending Story Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <img src="p2.avif" alt="New Energy Alliance" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">New Energy Alliance Forms in Asia</h3>
+                        <p class="text-gray-700 text-sm">Nations collaborate on renewable energy initiatives to combat climate change and boost regional stability.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <img src="p3.webp" alt="AI Ethics Debate" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">AI Ethics Debate Heats Up Globally</h3>
+                        <p class="text-gray-700 text-sm">Governments and tech leaders discuss regulations for artificial intelligence development and deployment.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <img src="p4.webp" alt="Global Tourism Rebounds" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Global Tourism Rebounds Post-Pandemic</h3>
+                        <p class="text-gray-700 text-sm">Travel industry sees significant recovery, adapting to new health and safety protocols.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <img src="p5.webp" alt="Space Exploration" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Private Sector Drives New Space Exploration</h3>
+                        <p class="text-gray-700 text-sm">Innovations from private companies are accelerating missions to the Moon and Mars.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <img src="p6.webp" alt="Health Innovations" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Breakthroughs in Personalized Medicine</h3>
+                        <p class="text-gray-700 text-sm">New treatments offer tailored approaches for various diseases, improving patient outcomes.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <img src="p7.webp" alt="Cultural Exchange" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Global Cultural Exchange Programs Thrive</h3>
+                        <p class="text-gray-700 text-sm">Initiatives promoting cross-cultural understanding gain momentum worldwide.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                 <!-- Trending Story Card 7 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Cybersecurity Threats on the Rise Globally</h3>
+                        <p class="text-gray-700 text-sm">Experts warn of increasing sophistication in cyberattacks targeting critical infrastructure.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 8 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Renewable Energy Adoption Accelerates Worldwide</h3>
+                        <p class="text-gray-700 text-sm">New solar and wind projects are rapidly changing the global energy landscape.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 9 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Reshaping Global Supply Chains for Resilience</h3>
+                        <p class="text-gray-700 text-sm">Companies and governments are investing in diversified supply networks to prevent future disruptions.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 10 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">The Rise of Digital Nomads Reshapes Tourism</h3>
+                        <p class="text-gray-700 text-sm">More countries are introducing special visas to attract remote workers, boosting local economies.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 11 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Urban Farming Innovations Tackle Food Security</h3>
+                        <p class="text-gray-700 text-sm">Vertical farms and rooftop gardens are transforming city landscapes and food production.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+                <!-- Trending Story Card 12 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.02]">
+                    <div class="p-5">
+                        <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">New Global Initiatives for Ocean Conservation</h3>
+                        <p class="text-gray-700 text-sm">International efforts intensify to protect marine ecosystems from pollution and climate change.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline mt-3 block">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Filter by Region -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-[--midnight-blue] mb-4">Quick Filter by Region:</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">North America</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Europe</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Asia</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Africa</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">South America</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Oceania</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Middle East</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Antarctica Research</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Arctic Region</button>
+                    <button class="bg-[--midnight-blue] text-[--clean-white] px-5 py-2 rounded-full hover:bg-[--signal-red] transition-colors shadow-md">Global</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-[--midnight-blue] mb-8 text-center">Explore Our Sections</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+                <!-- Section Card: World Affairs -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl text-[--signal-red] mb-4"><i class="fas fa-globe"></i></span>
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">World Affairs</h3>
+                    <p class="text-gray-700 text-sm">Global politics, conflict, diplomacy.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block text-sm">View Section</a>
+                </div>
+                <!-- Section Card: Tech & Economy -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl text-[--signal-red] mb-4"><i class="fas fa-microchip"></i></span>
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Tech & Economy</h3>
+                    <p class="text-gray-700 text-sm">Innovation, business, crypto, startups.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block text-sm">View Section</a>
+                </div>
+                <!-- Section Card: Planet & Climate -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl text-[--signal-red] mb-4"><i class="fas fa-leaf"></i></span>
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Planet & Climate</h3>
+                    <p class="text-gray-700 text-sm">Environment, sustainability, science.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block text-sm">View Section</a>
+                </div>
+                <!-- Section Card: Culture Wire -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl text-[--signal-red] mb-4"><i class="fas fa-mask"></i></span>
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Culture Wire</h3>
+                    <p class="text-gray-700 text-sm">Media, pop culture, arts, global movements.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block text-sm">View Section</a>
+                </div>
+                <!-- Section Card: Health Pulse -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl text-[--signal-red] mb-4"><i class="fas fa-heartbeat"></i></span>
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Health Pulse</h3>
+                    <p class="text-gray-700 text-sm">Public health, medicine, trends.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block text-sm">View Section</a>
+                </div>
+                <!-- Section Card: Opinion Deck -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center flex flex-col items-center transition-transform hover:scale-[1.03]">
+                    <span class="text-5xl text-[--signal-red] mb-4"><i class="fas fa-comments"></i></span>
+                    <h3 class="font-bold text-xl text-[--midnight-blue] mb-2">Opinion Deck</h3>
+                    <p class="text-gray-700 text-sm">Diverse global voices and editorial analysis.</p>
+                    <a href="#" class="text-[--signal-red] hover:underline mt-3 block text-sm">View Section</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Features Highlight -->
+        <section class="mb-12 bg-gray-100 rounded-xl shadow-md p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-[--midnight-blue] mb-8 text-center">Smart Features for a Smarter Read</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature Card: Region Personalization -->
+                <div class="bg-white rounded-xl shadow-lg p-5 text-center flex flex-col items-center transition-transform hover:scale-[1.02]">
+                    <span class="text-4xl text-[--signal-red] mb-3"><i class="fas fa-map-marker-alt"></i></span>
+                    <h3 class="font-bold text-lg text-[--midnight-blue] mb-2">Region Personalization</h3>
+                    <p class="text-gray-700 text-sm">Prioritize stories by your regions of interest.</p>
+                </div>
+                <!-- Feature Card: Bias Radar -->
+                <div class="bg-white rounded-xl shadow-lg p-5 text-center flex flex-col items-center transition-transform hover:scale-[1.02]">
+                    <span class="text-4xl text-[--signal-red] mb-3"><i class="fas fa-balance-scale"></i></span>
+                    <h3 class="font-bold text-lg text-[--midnight-blue] mb-2">Bias Radar</h3>
+                    <p class="text-gray-700 text-sm">Highlights political bias or slant when applicable.</p>
+                </div>
+                <!-- Feature Card: Side-by-Side View -->
+                <div class="bg-white rounded-xl shadow-lg p-5 text-center flex flex-col items-center transition-transform hover:scale-[1.02]">
+                    <span class="text-4xl text-[--signal-red] mb-3"><i class="fas fa-columns"></i></span>
+                    <h3 class="font-bold text-lg text-[--midnight-blue] mb-2">Side-by-Side View</h3>
+                    <p class="text-gray-700 text-sm">Compare how two countries report on the same story.</p>
+                </div>
+                <!-- Feature Card: Explainer Mode -->
+                <div class="bg-white rounded-xl shadow-lg p-5 text-center flex flex-col items-center transition-transform hover:scale-[1.02]">
+                    <span class="text-4xl text-[--signal-red] mb-3"><i class="fas fa-question-circle"></i></span>
+                    <h3 class="font-bold text-lg text-[--midnight-blue] mb-2">Explainer Mode</h3>
+                    <p class="text-gray-700 text-sm">"Why It Matters" bullet points on every article.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Modules -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- World at a Glance Module -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">🌍</span> World at a Glance</h2>
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- Article Card -->
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Middle East Peace Talks Resume</h3>
+                        <p class="text-gray-600 text-sm">Diplomats gather for a new round of negotiations, aiming for a lasting resolution.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">EU Unveils Green Energy Package</h3>
+                        <p class="text-gray-600 text-sm">Ambitious targets set for renewable energy adoption across member states.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">African Tech Hubs Attract Investment</h3>
+                        <p class="text-gray-600 text-sm">Startup ecosystems in major African cities see a surge in venture capital funding.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Latin America Faces Economic Headwinds</h3>
+                        <p class="text-gray-600 text-sm">Analysts discuss challenges and opportunities in the region's diverse economies.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                     <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">ASEAN Nations Strengthen Economic Ties</h3>
+                        <p class="text-gray-600 text-sm">Regional bloc announces new initiatives to boost trade and investment.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">G7 Leaders Address Global Food Crisis</h3>
+                        <p class="text-gray-600 text-sm">Summit focuses on strategies to ensure food security amid rising prices.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">UN Security Council Debates Cyber Warfare</h3>
+                        <p class="text-gray-600 text-sm">Nations call for international norms to prevent digital conflicts.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Context Matters Module -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">🧠</span> Context Matters</h2>
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- Article Card -->
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Understanding the Global Chip Shortage</h3>
+                        <p class="text-gray-600 text-sm">An in-depth look at the supply chain issues impacting various industries worldwide.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Rise of Digital Currencies: A Backgrounder</h3>
+                        <p class="text-gray-600 text-sm">Exploring the history and implications of cryptocurrencies and central bank digital currencies.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Climate Migration: A Growing Global Challenge</h3>
+                        <p class="text-gray-600 text-sm">Examining the increasing displacement of populations due to climate change impacts.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Future of Food Security: A Global Perspective</h3>
+                        <p class="text-gray-600 text-sm">Analyzing innovative agricultural practices and policy changes needed for sustainable food systems.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Democracy in the Digital Age: Challenges and Opportunities</h3>
+                        <p class="text-gray-600 text-sm">How technology is impacting governance and civic participation worldwide.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Evolution of Global Health Diplomacy</h3>
+                        <p class="text-gray-600 text-sm">Tracing the history and future of international cooperation on health crises.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Understanding the Metaverse: Beyond the Hype</h3>
+                        <p class="text-gray-600 text-sm">A deep dive into the technological and societal implications of virtual worlds.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Dive Module -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">🔍</span> Deep Dive</h2>
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- Article Card -->
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Special Report: The Future of Remote Work</h3>
+                        <p class="text-gray-600 text-sm">How companies and employees are adapting to hybrid models and their long-term effects.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Investigative Piece: Global Water Scarcity</h3>
+                        <p class="text-gray-600 text-sm">Uncovering the regions most affected and innovative solutions being developed.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Impact of Social Media on Global Protests</h3>
+                        <p class="text-gray-600 text-sm">Examining how digital platforms shape modern activism and political movements.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Ethics of AI in Warfare: A Comprehensive Study</h3>
+                        <p class="text-gray-600 text-sm">A look into the moral and strategic implications of autonomous weapons systems.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Decoding the Global Debt Crisis: A Macroeconomic View</h3>
+                        <p class="text-gray-600 text-sm">Analyzing the factors contributing to rising national debts and potential solutions.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Future of Sustainable Cities: Innovations and Challenges</h3>
+                        <p class="text-gray-600 text-sm">Exploring cutting-edge urban planning and green technologies worldwide.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fast Briefs Module -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">📺</span> Fast Briefs</h2>
+                <div class="grid grid-cols-1 gap-5">
+                    <!-- Video Brief Card -->
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Video: Daily Global News Roundup (5 min)</h3>
+                        <p class="text-gray-600 text-sm">Quick summaries of today's top stories from around the world.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Watch Now</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Video: Tech Innovations This Week (3 min)</h3>
+                        <p class="text-gray-600 text-sm">Highlights of groundbreaking advancements in technology.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Watch Now</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Video: Climate Action Updates (4 min)</h3>
+                        <p class="text-gray-600 text-sm">Latest developments in global efforts to combat climate change.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Watch Now</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Video: Global Economic Outlook (6 min)</h3>
+                        <p class="text-gray-600 text-sm">Expert analysis on the current state and future predictions for the world economy.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Watch Now</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Video: Spotlight on Global Culture (2 min)</h3>
+                        <p class="text-gray-600 text-sm">A quick look at trending arts, music, and cultural events worldwide.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Watch Now</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Video: Health Innovations Explained (3 min)</h3>
+                        <p class="text-gray-600 text-sm">Simple explanations of complex medical breakthroughs.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GlobeCast Podcast Module -->
+            <div class="bg-white rounded-xl shadow-md p-6 md:col-span-2">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">🎙️</span> GlobeCast Podcast</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <span class="text-4xl text-[--midnight-blue]"><i class="fas fa-podcast"></i></span>
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Daily Global Roundup: July 11, 2025</h3>
+                            <p class="text-gray-600 text-sm">Your daily 5-minute briefing on the world's most important stories.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Listen Now</a>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <span class="text-4xl text-[--midnight-blue]"><i class="fas fa-podcast"></i></span>
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Special Episode: The Future of Work</h3>
+                            <p class="text-gray-600 text-sm">An in-depth discussion on remote work trends and their societal impact.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Listen Now</a>
+                        </div>
+                    </div>
+                     <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <span class="text-4xl text-[--midnight-blue]"><i class="fas fa-podcast"></i></span>
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Interview: Climate Scientist Dr. Lena Khan</h3>
+                            <p class="text-gray-600 text-sm">Dr. Khan discusses her latest research on polar ice melt and its global implications.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Listen Now</a>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <span class="text-4xl text-[--midnight-blue]"><i class="fas fa-podcast"></i></span>
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Tech Trends Unpacked: AI & Robotics</h3>
+                            <p class="text-gray-600 text-sm">A deep dive into the latest advancements and ethical considerations in AI and robotics.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Listen Now</a>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <span class="text-4xl text-[--midnight-blue]"><i class="fas fa-podcast"></i></span>
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Global Health Disparities: A Deep Conversation</h3>
+                            <p class="text-gray-600 text-sm">Experts discuss challenges and solutions for achieving health equity worldwide.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Listen Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opinion Deck Module -->
+            <div class="bg-white rounded-xl shadow-md p-6 md:col-span-2">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">✍️</span> Opinion Deck</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">The Role of AI in Modern Diplomacy</h3>
+                        <p class="text-gray-600 text-sm">An op-ed by Dr. Anya Sharma on how artificial intelligence is changing international relations.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Opinion</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Rethinking Urban Development for Climate Resilience</h3>
+                        <p class="text-gray-600 text-sm">An expert view from architect Kenji Tanaka on building sustainable cities.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Opinion</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-bold text-lg text-[--midnight-blue] mb-1">The Global Youth Movement for Mental Health</h3>
+                        <p class="text-gray-600 text-sm">A personal essay by activist Maria Rodriguez on empowering young voices.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Opinion</a>
+                    </div>
+                     <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-bold text-lg text-[--midnight-blue] mb-1">The Future of Global Governance: A Call for Reform</h3>
+                        <p class="text-gray-600 text-sm">Prof. David Lee argues for a more inclusive and effective international system.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Opinion</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-bold text-lg text-[--midnight-blue] mb-1">Why Cultural Diplomacy Matters More Than Ever</h3>
+                        <p class="text-gray-600 text-sm">An analysis of the soft power of cultural exchange in a fractured world.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Opinion</a>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.01]">
+                        <h3 class="font-bold text-lg text-[--midnight-blue] mb-1">The Economic Impact of Climate Change: A Warning</h3>
+                        <p class="text-gray-600 text-sm">Economist Dr. Sarah Chen on the financial risks of inaction on climate change.</p>
+                        <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Opinion</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Interviews Module -->
+            <div class="bg-white rounded-xl shadow-md p-6 md:col-span-2">
+                <h2 class="text-3xl font-bold text-[--midnight-blue] mb-6 flex items-center"><span class="mr-3 text-[--signal-red]">🗣️</span> Featured Interviews</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <img src="https://placehold.co/80x80/B0BEC5/263238?text=JP" alt="Interviewee Profile" class="rounded-full w-20 h-20 object-cover">
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Interview with Dr. Jane Peterson: Vaccine Equity</h3>
+                            <p class="text-gray-600 text-sm">A leading epidemiologist discusses global disparities in vaccine access.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Interview</a>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <img src="https://placehold.co/80x80/B0BEC5/263238?text=RK" alt="Interviewee Profile" class="rounded-full w-20 h-20 object-cover">
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Conversation with CEO Robert Kim: Future of AI</h3>
+                            <p class="text-gray-600 text-sm">The tech visionary shares insights on the next decade of artificial intelligence.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Interview</a>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <img src="https://placehold.co/80x80/B0BEC5/263238?text=LS" alt="Interviewee Profile" class="rounded-full w-20 h-20 object-cover">
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Dialogue with Ambassador Lena Singh: UN Reforms</h3>
+                            <p class="text-gray-600 text-sm">Ambassador Singh discusses the challenges and necessity of reforming the United Nations.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Interview</a>
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 flex items-center space-x-4 transition-transform hover:scale-[1.01]">
+                        <img src="https://placehold.co/80x80/B0BEC5/263238?text=AM" alt="Interviewee Profile" class="rounded-full w-20 h-20 object-cover">
+                        <div>
+                            <h3 class="font-semibold text-lg text-[--midnight-blue] mb-1">Explorer Alex Miller on Arctic Expeditions</h3>
+                            <p class="text-gray-600 text-sm">Miller shares his experiences and scientific findings from recent Arctic research missions.</p>
+                            <a href="#" class="text-[--signal-red] hover:underline text-sm mt-2 block">Read Interview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup Section -->
+            <div class="bg-[--midnight-blue] text-[--clean-white] rounded-xl shadow-md p-6 md:p-8 text-center md:col-span-2">
+                <h2 class="text-3xl font-bold mb-4">Stay Informed. Get Globexa News in Your Inbox.</h2>
+                <p class="text-lg mb-6">Sign up for our daily digest and weekly deep dives. Unbiased, insightful, and always relevant.</p>
+                <form class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <input type="email" placeholder="Enter your email address" class="p-3 rounded-full w-full md:w-auto flex-grow text-[--midnight-blue] focus:outline-none focus:ring-2 focus:ring-[--signal-red]" required>
+                    <button type="submit" class="bg-[--signal-red] text-[--clean-white] px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors shadow-lg w-full md:w-auto">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[--midnight-blue] text-[--clean-white] p-6 md:p-8 mt-12 rounded-t-lg">
+        <div class="container mx-auto text-center grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-xl font-bold tracking-tight">Globexa News</a>
+                <p class="text-sm mt-2">&copy; 2025 Globexa News. All rights reserved.</p>
+                <p class="text-sm">Global Stories. Local Clarity.</p>
+            </div>
+            <div class="mb-4 md:mb-0">
+                <h3 class="font-semibold text-lg mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Contact</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-[--signal-red] transition-colors">Advertise</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-lg mb-3">Connect With Us</h3>
+                <div class="flex justify-center space-x-6 text-2xl">
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-[--signal-red] transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
